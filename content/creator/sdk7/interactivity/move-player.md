@@ -15,10 +15,11 @@ The easiest way to move the player is to use the [Scene Editor]({{< ref "/conten
 
 ## Move player
 
-To change the player's position in the scene, use the `movePlayerTo()` function. This function takes an object with two properties:
+To change the player's position in the scene, use the `movePlayerTo()` function. This function takes an object with three properties:
 
-- `newRelativePosition`: Where to move the player, expressed as a Vector3.
-- `cameraTarget`: (optional) What direction to make the player face, expressed as a Vector3 that represents the coordinates of a point in space to stare at. If no value is provided, the player will maintain the same rotation as before moving.
+- `newRelativePosition`: Where to position the player, expressed as a Vector3.
+- `cameraTarget`: (optional) What direction to make the camera face, expressed as a Vector3 that represents the coordinates of a point in space to stare at. If no value is provided, the camera will maintain the same rotation as before moving.
+- `avatarTarget`: (optional) What direction to make the avatar face, expressed as a Vector3 that represents the coordinates of a point in space to stare at. If no value is provided, the avatar will maintain the same rotation as before moving. If the player is in 1st person camera mode, the camera and avatar rotation are the same.
 
 ```ts
 import { movePlayerTo } from '~system/RestrictedActions'
@@ -43,6 +44,7 @@ pointerEventsSystem.onPointerDown(
 		movePlayerTo({
 			newRelativePosition: Vector3.create(1, 0, 1),
 			cameraTarget: Vector3.create(8, 1, 8),
+			avatarTarget: Vector3.create(8, 1, 8),
 		})
 	}
 )
