@@ -498,15 +498,15 @@ Using it together with `AvatarAttach`, you could use the following code to add a
 
 ```ts
 executeTask(async () => {
-	for (const [entity, data] of engine.getEntitiesWith(PlayerIdentityData)) {
-		const myEntity = engine.addEntity()
-		MeshRenderer.setBox(myEntity)
-		AvatarAttach.create(myEntity, {
-			anchorPointId: AvatarAnchorPoint.LEFT_HAND,
-			avatarId: player.userId,
-		})
-	}
-})
+        for (const [entity, data] of engine.getEntitiesWith(PlayerIdentityData)) {
+            const myEntity = engine.addEntity()
+            MeshRenderer.setBox(myEntity)
+            AvatarAttach.create(myEntity, {
+                anchorPointId: AvatarAnchorPointType.AAPT_LEFT_HAND,
+                avatarId: data.address,
+            })
+        }
+    })
 ```
 
 See other ways to fetch other user's IDs in [Get Player Data]({{< ref "/content/creator/sdk7/interactivity/user-data.md#get-player-data" >}}).
