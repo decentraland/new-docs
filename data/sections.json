@@ -1,5 +1,23 @@
 [
-  {"name": "Players", "path": "player", "accent": "#FF2D55", "description": "Discover how to experience Decentraland and get the most out of it", "img": "svg/player.svg"},
-  {"name": "Content Creators", "path": "creator", "accent": "#4947CD", "description": "Learn how to create content for others to experience in Decentraland", "img": "svg/creator.svg"},
-  {"name": "Contributors", "path": "contributor", "accent": "#EE834A", "description": "Learn how you can contribute to building the tools and infrastructure of Decentraland.", "img": "svg/contributor.svg"}
+	{
+		"name": "General",
+		"path": "player",
+		"accent": "#FF2D55",
+		"description": "Discover how to experience Decentraland and get the most out of it",
+		"img": "svg/player.svg"
+	},
+	{
+		"name": "Creator",
+		"path": "creator",
+		"accent": "#4947CD",
+		"description": "Learn how to create content for others to experience in Decentraland",
+		"img": "svg/creator.svg"
+	},
+	{
+		"name": "Open Protocol",
+		"path": "contributor",
+		"accent": "#EE834A",
+		"description": "See how Decentraland works & contribute.",
+		"img": "svg/contributor.svg"
+	}
 ]
